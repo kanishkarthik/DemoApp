@@ -1,0 +1,19 @@
+ng new shell-app
+cd shell-app
+ng add @angular-architects/module-federation --type host --port 4200
+
+ng new mfe-administration 
+cd mfe-administration
+ng add @angular-architects/module-federation --type remote --port 4201
+
+ng new mfe-accounts
+cd mfe-accounts
+ng add @angular-architects/module-federation --type remote --port 4202
+
+ng new mfe-payments
+cd mfe-payments
+ng add @angular-architects/module-federation --type remote --port 4203
+
+ng new mfe-payment-mgmt
+cd mfe-payment-mgmt
+ng add @angular-architects/module-federation --type remote --port 4204
