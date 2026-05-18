@@ -15,10 +15,7 @@ export const appConfig: ApplicationConfig = {
       withEnabledBlockingInitialNavigation(),
       withPreloading(EntitlementAwarePreloadStrategy)
     ),
-    provideHttpClient(),
-    provideAppInitializer(() => {
-      const initializeAppService = inject(InitializeAppService);
-      return initializeAppService.initialize();
-    })
+    provideHttpClient(),    
+    provideAppInitializer(() => inject(InitializeAppService).initialize()),    
   ]
 };

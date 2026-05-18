@@ -1,0 +1,8 @@
+{
+    "appTitle": "Demo Application",
+    "welcomeMessage": "Welcome to the Demo Application!",
+    "admins": "Admins",
+    "accounts": "Accounts",
+    "payments": "Payments",
+    "paymentMgmt": "Payment Management"
+}
