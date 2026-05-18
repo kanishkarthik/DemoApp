@@ -1,13 +1,14 @@
 import { loadRemoteModule } from '@angular-architects/module-federation';
 import { Routes } from '@angular/router';
+import { App } from './app';
 
-export const routes: Routes = [
+export const routes: Routes = [  
     {
         path: 'remotes/admins',
         loadChildren: () => {
             return loadRemoteModule({
+                type: 'module',
                 remoteEntry: 'http://localhost:4201/remoteEntry.js',
-                remoteName: 'mfeAdmin',
                 exposedModule: './admin_routes'
             }).then(m => m.ADMIN_ROUTES);
         }
@@ -16,10 +17,10 @@ export const routes: Routes = [
         path: 'remotes/accounts',
         loadChildren: () => {
             return loadRemoteModule({
+                type: 'module',
                 remoteEntry: 'http://localhost:4202/remoteEntry.js',
-                remoteName: 'mfeAccounts',
-                exposedModule: './accounts'
-            }).then(m => m.App);
+                exposedModule: './account_routes'
+            }).then(m => m.ACCOUNT_ROUTES);
 
         }
     },
@@ -27,20 +28,21 @@ export const routes: Routes = [
         path: 'remotes/payments',
         loadChildren: () => {
             return loadRemoteModule({
+                type: 'module',
                 remoteEntry: 'http://localhost:4203/remoteEntry.js',
-                remoteName: 'mfePayments',
-                exposedModule: './app'
-            }).then(m => m.App);
+                exposedModule: './payment_routes'
+            }).then(m => m.PAYMENT_ROUTES);
         }
     },
     {
         path: 'remotes/payment-mgmt',
+
         loadChildren: () => {
             return loadRemoteModule({
+                type: 'module',
                 remoteEntry: 'http://localhost:4204/remoteEntry.js',
-                remoteName: 'mfePaymentMgmt',
-                exposedModule: './payment-mgmt'
-            }).then(m => m.App);
+                exposedModule: './payment_mgmt_routes'
+            }).then(m => m.PAYMENT_MGMT_ROUTES);
         }
     }
 ];

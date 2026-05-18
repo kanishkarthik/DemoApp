@@ -2,7 +2,7 @@ const { shareAll, share, withModuleFederationPlugin } = require('@angular-archit
 
 module.exports = withModuleFederationPlugin({
 
-  name: 'mfeAdmin',
+  name: 'mfe-admins',
 
   exposes: {
     './admins': './src/app/app.ts',

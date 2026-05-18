@@ -5,7 +5,8 @@ module.exports = withModuleFederationPlugin({
   name: 'mfe-accounts',
 
   exposes: {
-    './Component': './src/app/app.ts',
+    './accounts': './src/app/app.ts',
+    './account_routes': './src/app/app.routes.ts',
   },
 
   shared: {

@@ -2,10 +2,11 @@ const { shareAll, withModuleFederationPlugin } = require('@angular-architects/mo
 
 module.exports = withModuleFederationPlugin({
 
-  name: 'mfePayments',
+  name: 'mfe-payments',
 
   exposes: {
     './app': './src/app/app.ts',
+    './payment_routes': './src/app/app.routes.ts',
   },
 
   shared: {

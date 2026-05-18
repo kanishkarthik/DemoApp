@@ -5,7 +5,8 @@ module.exports = withModuleFederationPlugin({
   name: 'mfe-payment-mgmt',
 
   exposes: {
-    './Component': './src/app/app.ts',
+    './payment_mgmt': './src/app/app.ts',
+    './payment_mgmt_routes': './src/app/app.routes.ts',
   },
 
   shared: {
