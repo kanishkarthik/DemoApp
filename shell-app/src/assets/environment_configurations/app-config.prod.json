@@ -1,0 +1,8 @@
+{
+    "remotes": {
+        "admins": "http://localhost:4201/remoteEntry.js",
+        "accounts": "http://localhost:4202/remoteEntry.js",
+        "payments": "http://localhost:4203/remoteEntry.js",
+        "paymentMgmt": "http://localhost:4204/remoteEntry.js"
+    }
+}

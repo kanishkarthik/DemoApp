@@ -1,8 +1,0 @@
-{
-    "remotes": {
-        "mfeAdmin": "http://localhost:4201/remotes/admin/remoteEntry.js",
-        "mfeAccounts": "http://localhost:4202/remotes/accounts/remoteEntry.js",
-        "mfePayments": "http://localhost:4203/remotes/payments/remoteEntry.js",
-        "mfePaymentMgmt": "http://localhost:4204/remotes/payment-mgmt/remoteEntry.js"
-    }
-}
